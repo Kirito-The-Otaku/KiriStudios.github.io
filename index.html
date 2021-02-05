@@ -1,8 +1,88 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>Hi There</title>
+    <head>
+    <title>KiriTools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>Hi There</h1>
-</body>
-</html>
+    <div class="header">
+        <h1>KiriTools</h1>
+        <p>Random Tools</p>
+    </div>
+    <button id="m" class="tablink" onclick="openPage('Mathe', this, 'blue')" style="background-color: blue;">Mathe</button>
+    <button class="tablink" onclick="openPage('e', this, 'green')" id="defaultOpen" style="">Comming Soon</button>
+    <button class="tablink" onclick="openPage('e', this, 'blue')" style="">Comming Soon</button>
+    <button class="tablink" onclick="openPage('RTools', this, 'purple')">Random Tools</button>
+    <div id="Mathe" class="tabcontent" style="display: block;">
+       <div class="container">
+           <div class="row">
+              <div class="main">
+                <h2>Kreis-Rechner</h2>
+                <h3>Das Tool zum ausrechnen des Umfangs und der Fläche eines Kreises</h3>
+                <p>der Rechner rechnet durch den Radius oder dem Durchmesser die Fläche und den Umfang aus.</p>
+                <p>der Kreis-Rechner kann auch Bilder mit der Formel Generieren</p>
+                <button class="btn" type="submit" onclick="window.open('downloads/KreisRechner.zip')"><i class="fa fa-download"></i> Download</button>
+                <img src="imgs/gen.png" alt="Generiertes Bild" style="width:40%;">
+              </div>
+              <div class="side">
+                <img src="imgs/kreis.PNG" alt="Bild Vom Rechner" style="width:60%;">
+              </div>
+            </div>
+            <div class="row">
+                <div class="main">
+                  <h2>Prozente Rechner</h2>
+                  <h3>Ein Tool zum Rechnen von Prozenten</h3>
+                  <p>Tex</p>
+                  <p>Text</p>
+                  <button class="btn" type="submit" onclick="window.open('')"><i class="fa fa-download"></i> Noch Nicht Verfügbar</button>                
+                </div>
+                <div class="side">
+                  <img src="imgs/kreis.PNG" alt="Bild Vom Rechner" style="width:60%;">
+                </div>
+              </div>
+              
+        </div> 
+    </div>
+    <div id="RTools" class="tabcontent" style="display: block;">
+        <div class="container">
+            <div class="row">
+               <div class="main-purple">
+                 <h2>Title</h2>
+                 <h3>text</h3>
+                 <p>text</p>
+                 <button class="btn" type="submit" onclick="window.open('')"><i class="fa fa-download"></i> Download noch nicht verfügbar</button>
+               </div>
+               <div class="side-purple">
+                 <img src="imgs/" alt="Platzhalter bild" style="width:60%;">
+               </div>
+             </div>
+         </div>
+     </div>
+    <div id="e" class="tabcontent" style="display: none;">
+      <h3>Comming Soon</h3>
+      <p>this tab is comming soon</p>
+    </div>
+<script>
+        function openPage(pageName, elmnt, color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+        
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+        
+          document.getElementById(pageName).style.display = "block";
+        
+          elmnt.style.backgroundColor = color;
+        }
+        document.getElementById("defaultOpen").click(); 
+        openPage('Mathe', document.getElementById("m"), 'blue');
+    </script>
+
+</body></html>

@@ -1,0 +1,128 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: blue;
+}
+.container {
+  position:relative;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: blue; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: blue; /* White background color */
+  padding: 20px; /* Some padding */
+}
+.side-purple {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: purple; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main-purple {
+  flex: 70%; /* Set the width of the main content */
+  background-color: purple; /* White background color */
+  padding: 20px; /* Some padding */
+}
+.header {
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background-image: URL("../imgs/bg.gif");
+  color: white; /* white text color */
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 80px;
+}
+.header p {
+  font-size: 30px;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: max-content;
+  
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+#Mathe {
+    background-image: URL("../imgs/space.gif");
+    color: white; /* white text color */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#RTools {
+  background-image: URL("../imgs/space.gif");
+  color: white; /* white text color */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+#e {background-color: green;}
